@@ -1,0 +1,15 @@
+help
+add
+TEST_2
+5
+5
+100
+150
+125
+easy
+discipline
+99
+33
+10
+save
+show
