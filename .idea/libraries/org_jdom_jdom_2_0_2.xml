@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="jdom" type="repository">
+  <library name="org.jdom:jdom:2.0.2" type="repository">
     <properties maven-id="org.jdom:jdom:2.0.2" />
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/jdom/jdom/2.0.2/jdom-2.0.2.jar!/" />

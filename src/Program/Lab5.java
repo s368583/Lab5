@@ -4,6 +4,7 @@ import CollectionData.LabWork;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.File;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Vector;
@@ -38,7 +39,31 @@ public class Lab5 {
     public static boolean script = false;
 
     public static void main(String[] args) throws Exception {
-        new CollectionFiller().execute();
+        String fileName = "";
+
+        if(args.length==1) {
+            fileName = args[0];
+        }
+        else {
+            if(args.length>0) {
+                System.out.println("Ошибка аргумента. Буду использвать collection.xml");
+            }
+            fileName="src/collection.xml";
+        }
+
+        System.out.printf("Имя файла: %s\n", fileName);
+
+        File f = new File(fileName);
+        if (f.isFile() && f.canRead()) {
+            System.out.println("файл существует");
+        } else {
+            fileName = "src/collection.xml";
+            System.out.println("Такого файла не существует, буду использвать src/collection.xml");
+        }
+
+        CollectionFiller collectionFiller = new CollectionFiller();
+        collectionFiller.setFilePath(fileName);
+        collectionFiller.execute();
         ConsoleCommandReader.start();
 
 

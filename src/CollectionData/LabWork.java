@@ -22,15 +22,15 @@ public class LabWork implements Comparable<LabWork> {
     private Coordinates coordinates;
     private LocalDateTime creationDate;
     private double minimalPoint;
-    private Integer maximumPoint;
-    private Integer averagePoint;
+    private double maximumPoint;
+    private double averagePoint;
     private Difficulty difficulty;
     private Discipline discipline;
 
     public LabWork(){};
 
-    public LabWork(String name, Coordinates coordinates, double minimalPoint, int maximumPoint,
-                   int averagePoint, Difficulty difficulty, Discipline discipline) {
+    public LabWork(String name, Coordinates coordinates, double minimalPoint, double maximumPoint,
+                   double averagePoint, Difficulty difficulty, Discipline discipline) {
         this.name = name;
         this.coordinates = coordinates;
         this.minimalPoint = minimalPoint;
@@ -103,11 +103,20 @@ public class LabWork implements Comparable<LabWork> {
             scanner = new Scanner(System.in);
             check = false;
             System.out.print("Введите максимальное количество баллов: ");
-            Integer maximumPoint = null;
+            Double maximumPoint = null;
+            Double maybemax = null;
             while(!check) {
                 try {
-                    maximumPoint = Integer.parseInt(scanner.nextLine());
-                    check = true;
+                    maybemax = Double.parseDouble(scanner.nextLine());
+                    if (maybemax > minimalPoint){
+                        maximumPoint = maybemax;
+                        check = true;
+                    }
+                    else{
+                        System.out.println("\nДанные введены неверно - мксимальный балл меньше/равен минимальному баллу");
+                        System.out.print("Введите максимальное количество баллов: ");
+                    }
+
                 } catch(Exception e) {
                     System.out.println("\nДанные введены неверно");
                     System.out.print("Введите максимальное количество баллов: ");
@@ -116,12 +125,22 @@ public class LabWork implements Comparable<LabWork> {
 
             check = false;
             System.out.print("Введите средний балл: ");
-            Integer averagePoint = null;
+            Double averagePoint = null;
+            Double maybeaverage = null;
             while(!check) {
                 try {
-                    averagePoint = Integer.parseInt(scanner.nextLine());
-                    check = true;
-                } catch(Exception e) {
+                    maybeaverage = Double.parseDouble(scanner.nextLine());
+                    if (maybeaverage < maximumPoint &&  maybeaverage > minimalPoint){
+                        averagePoint = maybeaverage;
+                        check = true;
+                    }
+                    else{
+                        System.out.println("\nДанные введены неверно - средний балл находится вне промежутка максимального и манимального балла");
+                        System.out.print("Введите максимальное количество баллов: ");
+                    }
+
+                }
+                catch(Exception e) {
                     System.out.println("\nДанные введены неверно");
                     System.out.print("Введите средний балл: ");
                 }
@@ -204,14 +223,14 @@ public class LabWork implements Comparable<LabWork> {
     public void setMinimalPoint(double minimalPoint) {
         this.minimalPoint = minimalPoint;
     }
-    public Integer getMaximumPoint() {
+    public double getMaximumPoint() {
         return maximumPoint;
     }
     @XmlElement
     public void setMaximumPoint(Integer maximumPoint) {
         this.maximumPoint = maximumPoint;
     }
-    public Integer getAveragePoint() {
+    public double getAveragePoint() {
         return averagePoint;
     }
     @XmlElement
