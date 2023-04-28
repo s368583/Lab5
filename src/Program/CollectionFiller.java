@@ -22,6 +22,7 @@ import java.util.Scanner;
 public class CollectionFiller extends Command {
     //protected Scanner scanner = new Scanner(new File("src/save.json"));
     //protected Gson gson = new Gson();
+    private String filePath;
 
     /**
      * Метод для учета возможной ошибки по ходу чтения файла
@@ -40,7 +41,7 @@ public class CollectionFiller extends Command {
             CollectionDeque deque =  new CollectionDeque();
             jaxbContext = JAXBContext.newInstance(LabList.class);
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-            LabList labs = (LabList) jaxbUnmarshaller.unmarshal(new File("src/collection.xml"));
+            LabList labs = (LabList) jaxbUnmarshaller.unmarshal(new File(filePath));
             for (LabWork labWork : labs.getLabs()) {
                 labWork.setCreationDate(LocalDateTime.now());
                 System.out.println(labWork.toString());
@@ -52,8 +53,13 @@ public class CollectionFiller extends Command {
             System.out.println("Файл пустой");
         }
 
+    }
 
+    public String getFilePath() {
+        return filePath;
+    }
 
-
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
     }
 }

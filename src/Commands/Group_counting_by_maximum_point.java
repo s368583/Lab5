@@ -22,10 +22,10 @@ public class Group_counting_by_maximum_point extends Command {
 
     @Override
     public void execute() {
-        HashSet<Integer> pointsSet = new HashSet<>(); //здесь хранятся все возможные значения maximumPoint, это множество
+        HashSet<Double> pointsSet = new HashSet<>(); //здесь хранятся все возможные значения maximumPoint, это множество
         for(LabWork labWork : Lab5.collection)
             pointsSet.add(labWork.getMaximumPoint());
-        ArrayList<Integer> list = new ArrayList<>(); //здесь хранятся все возможные значения maximumPoint, а это список (тут можно ходить по индексам)
+        ArrayList<Double> list = new ArrayList<>(); //здесь хранятся все возможные значения maximumPoint, а это список (тут можно ходить по индексам)
         list.addAll(pointsSet);
 
         int[] counter = new int[pointsSet.size()];

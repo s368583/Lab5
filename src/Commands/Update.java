@@ -19,10 +19,33 @@ public class Update extends Command {
 
     @Override
     public void execute(Object arguments) {
-        long id = Long.parseLong(String.valueOf(arguments));
-        Lab5.collection.removeIf(labWork -> labWork.getId() == id);
-        LabWork labWork = LabWork.create();
-        labWork.setId(id); //устанавливает labWork id
-        Lab5.collection.add(labWork);
+        try {
+            long id = Long.parseLong(String.valueOf(arguments));
+            String str = Long.toString(id);
+            if(isNumeric(str)){
+                Lab5.collection.removeIf(labWork -> labWork.getId() == id);
+                LabWork labWork = LabWork.create();
+                labWork.setId(id); //устанавливает labWork id
+                Lab5.collection.add(labWork);
+            }
+
+        } catch(Exception e) {
+            System.out.println("\nДанные введены неверно");
+            System.out.print("Введите название работы: ");
+        }
+    }
+
+    /**
+     * Проверка на то, является ли аргумент числом
+     * @param str
+     * @return boolean
+     */
+    public static boolean isNumeric(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 }

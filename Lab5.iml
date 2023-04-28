@@ -7,12 +7,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="gson-2.8.9" level="project" />
-    <orderEntry type="library" name="jdom" level="project" />
-    <orderEntry type="library" name="javax.xml.bind:jaxb-api:2.3.1" level="project" />
-    <orderEntry type="library" name="com.sun.xml.bind:jaxb-core:4.0.2" level="project" />
-    <orderEntry type="library" name="com.sun.xml.bind:jaxb-impl:4.0.2" level="project" />
-    <orderEntry type="library" name="org.javassist:javassist:3.29.2-GA" level="project" />
-    <orderEntry type="library" name="org.glassfish.jaxb:jaxb-runtime:4.0.0" level="project" />
+    <orderEntry type="library" exported="" name="gson-2.8.91" level="project" />
+    <orderEntry type="library" exported="" name="gson-2.8.9" level="project" />
+    <orderEntry type="library" exported="" name="org.glassfish.jaxb:jaxb-runtime:2.3.1" level="project" />
+    <orderEntry type="library" exported="" name="com.sun.xml.bind:jaxb-impl:3.0.2" level="project" />
+    <orderEntry type="library" exported="" name="com.sun.xml.bind:jaxb-core:3.0.2" level="project" />
+    <orderEntry type="library" exported="" name="javax.xml.bind:jaxb-api:2.3.1" level="project" />
+    <orderEntry type="library" exported="" name="javax.activation:activation:1.1.1" level="project" />
+    <orderEntry type="library" exported="" name="jakarta.xml.bind:jakarta.xml.bind-api:3.0.1" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="org.jdom:jdom:2.0.2" level="project" />
   </component>
 </module>

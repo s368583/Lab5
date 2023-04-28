@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Labs>
+  <Lab id="1">
+    <name>asdfg</name>
+    <coordinates>
+      <x>8</x>
+      <y>8</y>
+    </coordinates>
+    <minimalPoint>1.0</minimalPoint>
+    <maximumPoint>0.0</maximumPoint>
+    <averagePoint>0.0</averagePoint>
+    <difficulty>EASY</difficulty>
+    <discipline>
+      <name>dfghj</name>
+      <lectureHours>6</lectureHours>
+      <selfStudyHours>6</selfStudyHours>
+      <labsCount>6</labsCount>
+    </discipline>
+  </Lab>
+  <Lab id="2">
+    <name>asdfgh</name>
+    <coordinates>
+      <x>5</x>
+      <y>5</y>
+    </coordinates>
+    <minimalPoint>8.0</minimalPoint>
+    <maximumPoint>0.0</maximumPoint>
+    <averagePoint>0.0</averagePoint>
+    <difficulty>EASY</difficulty>
+    <discipline>
+      <name>sdfghj</name>
+      <lectureHours>6</lectureHours>
+      <selfStudyHours>6</selfStudyHours>
+      <labsCount>6</labsCount>
+    </discipline>
+  </Lab>
+  <Lab id="3">
+    <name>sdfghjk</name>
+    <coordinates>
+      <x>7</x>
+      <y>7</y>
+    </coordinates>
+    <minimalPoint>0.0</minimalPoint>
+    <maximumPoint>0.0</maximumPoint>
+    <averagePoint>0.0</averagePoint>
+    <difficulty>INSANE</difficulty>
+    <discipline>
+      <name>asdfghjkj</name>
+      <lectureHours>6</lectureHours>
+      <selfStudyHours>5</selfStudyHours>
+      <labsCount>6</labsCount>
+    </discipline>
+  </Lab>
+  <Lab id="4">
+    <name>sdfgh</name>
+    <coordinates>
+      <x>5</x>
+      <y>5</y>
+    </coordinates>
+    <minimalPoint>3.2345678765432124</minimalPoint>
+    <maximumPoint>0.0</maximumPoint>
+    <averagePoint>0.0</averagePoint>
+    <difficulty>TERRIBLE</difficulty>
+    <discipline>
+      <name>sdfgh</name>
+      <lectureHours>4</lectureHours>
+      <selfStudyHours>4</selfStudyHours>
+      <labsCount>4</labsCount>
+    </discipline>
+  </Lab>
+  <Lab id="5">
+    <name>TEST_2</name>
+    <coordinates>
+      <x>5</x>
+      <y>5</y>
+    </coordinates>
+    <minimalPoint>100.0</minimalPoint>
+    <maximumPoint>150.0</maximumPoint>
+    <averagePoint>125.0</averagePoint>
+    <difficulty>EASY</difficulty>
+    <discipline>
+      <name>discipline</name>
+      <lectureHours>99</lectureHours>
+      <selfStudyHours>33</selfStudyHours>
+      <labsCount>10</labsCount>
+    </discipline>
+  </Lab>
+</Labs>

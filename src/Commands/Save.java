@@ -78,7 +78,6 @@ public class Save extends Command {
             throw new RuntimeException(e);
         }
 
-//        jsonwriter.write(gson.toJson(Lab5.collection));
-//        jsonwriter.flush();
+
     }
 }
